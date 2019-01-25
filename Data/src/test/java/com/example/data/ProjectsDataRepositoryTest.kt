@@ -91,14 +91,6 @@ class ProjectsDataRepositoryTest {
         testObserver.assertComplete()
     }
 
-    @Test
-    fun setProjectAsBookmarkedCallsCacheStore() {
-        val projectId = DataFactory.randomString()
-        stubBookmarkProject(Completable.complete())
-        store.setProjectAsBookmarked(projectId).test()
-        verify(cache).setProjectAsBookmarked(projectId)
-    }
-
     private fun stubBookmarkProject(completable: Completable) {
         whenever(store.setProjectAsBookmarked(any()))
             .thenReturn(completable)

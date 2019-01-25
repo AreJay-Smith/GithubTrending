@@ -14,8 +14,7 @@ object ProjectConstants {
 
     const val QUERY_BOOKMARKED_PROJECTS = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_IS_BOOKMARKED = 1"
 
-    const val QUERY_UPDATE_BOOKMARK_STATUS = "UPDATE $TABLE_NAME WHERE" +
-            "SET $COLUMN_IS_BOOKMARKED = :isBookmarked WHERE" +
+    const val QUERY_UPDATE_BOOKMARK_STATUS = "UPDATE $TABLE_NAME SET $COLUMN_IS_BOOKMARKED = :isBookmarked WHERE " +
             "$COLUMN_PROJECT_ID = :projectId"
 
 }
