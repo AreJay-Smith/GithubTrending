@@ -15,7 +15,7 @@ import io.reactivex.observers.DisposableCompletableObserver
 import io.reactivex.observers.DisposableObserver
 import javax.inject.Inject
 
-class BrowseProjectViewModel @Inject constructor(
+class BrowseProjectsViewModel @Inject constructor(
     private val getProjects: GetProjects,
     private val bookmarkProject: BookmarkProject,
     private val unbookmarkProject: UnbookmarkProject,
